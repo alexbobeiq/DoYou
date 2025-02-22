@@ -77,7 +77,7 @@ p.speech:after {
     position: relative;
 }
 
-.options button:hover {
+.hover-item:hover {
     background-color: #ff7f7f;
 }
 

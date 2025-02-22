@@ -108,7 +108,7 @@ function teleportButton(noButton) {
 
   noButton.style.position = "absolute"
   noButton.style.left = rect.left + randomXDelta - 0.22 * (rect.right - rect.left) + "px";
-  noButton.style.top = rect.top + randomYDelta - 0.22 * (rect.right-rect.left) + "px";
+  noButton.style.top = rect.top + randomYDelta - 0.18 * (rect.right-rect.left) + "px";
 }
 
 
