@@ -6,21 +6,154 @@ body {
     background-color: pink;
     font-family: Arial, sans-serif;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
-
 .container {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 90%;
 }
-
 .options {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
-label {
+.options button {
     font-size: 18px;
     margin: 10px;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.options button:hover {
+    background-color: #ff7f7f;
+}
+
+.options button:focus {
+    outline: none;
+}
+
+.yes-active {
+    background-color: #ff4d4d;
+}
+
+.no-active {
+    background-color: #7f7f7f;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.5);
+    transform: rotate(-45deg);
+    animation: float 4s linear infinite;
+}
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+}
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1) rotate(-45deg); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.5) rotate(-45deg); opacity: 0; }
+}
+/* Make hearts appear across the entire screen */
+.heart {
+    left: calc(100vw * var(--random-x));
+}
+
+/* Avatar Styling */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    margin-left: 15px;
+}
+
+.avatar.fade-out {
+    opacity: 0; /
+  }
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .avatar {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+#error-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#error-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#error-message.change {
+    animation: changeMessage 0.5s ease forwards;
+}
+
+@keyframes changeMessage {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
