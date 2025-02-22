@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       createHearts()
       updateErrorMessage("CAN'T WAIT TO SEE YOU AGAIN!!!", errorMessage)
       changeWithFade(avatar, "resources/i love you infinity.png")
+      yesClicked = -1;
     }
 
     yesClicked++
