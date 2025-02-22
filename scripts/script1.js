@@ -78,7 +78,7 @@ function createHearts() {
 
     setTimeout(() => {
       heart.remove()
-    }, 3000)
+    }, 2750)
   }
 }
 
