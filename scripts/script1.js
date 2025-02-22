@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   yesButton.addEventListener("click", function () {
-    navigator.vibrate(200)
     if(yesClicked === 0) {
       resetButtonPosition(noButton)
       createHearts()
