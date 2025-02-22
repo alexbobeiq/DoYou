@@ -23,6 +23,43 @@ body {
     flex-wrap: wrap;
     max-width: 90%;
 }
+
+p.bubble {
+	position: relative;
+	width: 300px;
+	text-align: center;
+	line-height: 1.4em;
+	margin: 40px auto;
+	background-color: #fff;
+	border: 2px solid #333;
+	border-radius: 30px;
+	font-family: sans-serif;
+	padding: 20px;
+	font-size: large;
+}
+
+p.bubble:before,
+p.bubble:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+p.speech:before {
+	left: 180px;
+	bottom: -50px;
+	border: 25px solid;
+	border-color: #333 transparent transparent #333;
+}
+
+p.speech:after {
+	left: 185px;
+	bottom: -40px;
+	border: 30px solid;
+	border-color: #fff transparent transparent #fff;
+}
+
 .options {
     margin-top: 20px;
     display: flex;
@@ -30,6 +67,7 @@ body {
     gap: 10px;
 }
 .options button {
+    z-index: 100;
     font-size: 18px;
     color: black;
     margin: 10px;

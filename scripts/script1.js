@@ -102,14 +102,13 @@ function changeWithFade(object, source) {
 function teleportButton(noButton) {
   let container = document.querySelector(".container")
   let rect = container.getBoundingClientRect()
-  console.log("containerul are proprietatile:\n top: " + rect.top + "\nbottom: " + rect.bottom + "\nleft: " + rect.left + "\nright: " + rect.right)
 
   randomXDelta = Math.floor(Math.random() * (rect.right - rect.left))
   randomYDelta = Math.floor(Math.random() * (rect.bottom - rect.top))
 
   noButton.style.position = "absolute"
-  noButton.style.left = rect.left + randomXDelta - 0.35 * (rect.right - rect.left) + "px";
-  noButton.style.top = rect.top + randomYDelta - 0.35 * (rect.right-rect.left) + "px";
+  noButton.style.left = rect.left + randomXDelta - 0.22 * (rect.right - rect.left) + "px";
+  noButton.style.top = rect.top + randomYDelta - 0.38 * (rect.right-rect.left) + "px";
 }
 
 
