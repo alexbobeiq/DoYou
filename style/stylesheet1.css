@@ -2,7 +2,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: pink;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -34,7 +33,7 @@ p.bubble {
 	border: 2px solid #333;
 	border-radius: 30px;
 	font-family: sans-serif;
-	padding: 20px;
+	padding: 10px;
 	font-size: large;
 }
 
@@ -47,30 +46,28 @@ p.bubble:after {
 }
 
 p.speech:before {
-	left: 130px;
+	left: 120px;
 	bottom: -50px;
 	border: 25px solid;
 	border-color: #333 transparent transparent #333;
 }
 
 p.speech:after {
-	left: 134px;
+	left: 125px;
 	bottom: -40px;
-	border: 30px solid;
+	border: 22px solid;
 	border-color: #fff transparent transparent #fff;
 }
 
 .options {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
 }
 .options button {
     z-index: 100;
     font-size: 18px;
     color: black;
-    margin: 10px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
