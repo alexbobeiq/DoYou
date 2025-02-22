@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let noButton = document.getElementById("no-btn")
-  let yesButton = document.querySelector(".yes-btn")
+  let yesButton = document.getElementById("yes-btn")
   let errorMessage = document.getElementById("error-message")
   let avatar = document.querySelector(".avatar")
 
