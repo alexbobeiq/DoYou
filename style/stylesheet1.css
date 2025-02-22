@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
     background-color: pink;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -29,7 +29,7 @@ p.bubble {
 	width: 175px;
 	text-align: center;
 	line-height: 1.4em;
-	margin: 40px auto;
+	margin: 10px auto;
 	background-color: #fff;
 	border: 2px solid #333;
 	border-radius: 30px;
@@ -61,10 +61,10 @@ p.speech:after {
 }
 
 .options {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 .options button {
     z-index: 100;
